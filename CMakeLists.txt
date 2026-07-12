@@ -5,7 +5,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_library(SoLoudLib SHARED)
 
-file(GLOB CORE_SRC SOURCES "core/*.cpp")
+file(GLOB CORE_SRC SOURCES "src/core/*.cpp")
 file(GLOB HEADER_SRC SOURCES "include/*.h")
 
 target_sources(SoLoudLib
