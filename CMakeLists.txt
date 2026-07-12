@@ -5,8 +5,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_library(SoLoudLib SHARED)
 
-file(GLOB CORE_SRC SOURCES CONFIGURE_DEPENDS "core/*.cpp")
-file(GLOB HEADER_SRC SOURCES CONFIGURE_DEPENDS "include/*.h")
+file(GLOB CORE_SRC SOURCES "core/*.cpp")
+file(GLOB HEADER_SRC SOURCES "include/*.h")
 
 target_sources(SoLoudLib
     PRIVATE
@@ -21,6 +21,8 @@ target_sources(SoLoudLib
 )
 
 target_compile_features(SoLoudLib PRIVATE cxx_std_20)
+
+add_subdirectory(sorcloud)
 
 # Hmmm...yes, for anuke, SDL2 as backends is needed.
 find_package(SDL2 REQUIRED)
